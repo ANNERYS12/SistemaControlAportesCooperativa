@@ -1,4 +1,4 @@
-namespace Cooperativa.Models
+namespace SistemaControlAportesCooperativa.Models
 {
     public class Socio
     {
