@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using SistemaControlAportesCooperativa.Data;
+using SistemaControlAportesCooperativa.Infrastructure.Context;
 
 #nullable disable
 

@@ -20,4 +20,14 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="10.2.1" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SistemaControlAportesCooperativa.Domain\SistemaControlAportesCooperativa.Domain.csproj" />
+    <ProjectReference Include="..\SistemaControlAportesCooperativa.Infraestructure\SistemaControlAportesCooperativa.Infraestructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Data\" />
+    <Folder Include="models\" />
+  </ItemGroup>
+
 </Project>

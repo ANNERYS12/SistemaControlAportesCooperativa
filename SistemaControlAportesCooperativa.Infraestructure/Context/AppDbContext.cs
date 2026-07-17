@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using SistemaControlAportesCooperativa.Models;
+using SistemaControlAportesCooperativa.Domain.Entities;
 
-namespace SistemaControlAportesCooperativa.Data
+namespace SistemaControlAportesCooperativa.Infrastructure.Context 
 {
     public class AppDbContext : DbContext
     {
@@ -9,11 +9,18 @@ namespace SistemaControlAportesCooperativa.Data
 
         public DbSet<Socio> Socios { get; set; }
         public DbSet<Aporte> Aportes { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Socio>(entity =>
             {
                 entity.Property(e => e.BalanceAportes)
+                      .HasPrecision(18, 2);
+            });
+
+            modelBuilder.Entity<Aporte>(entity =>
+            {
+                entity.Property(e => e.Monto)
                       .HasPrecision(18, 2);
             });
         }

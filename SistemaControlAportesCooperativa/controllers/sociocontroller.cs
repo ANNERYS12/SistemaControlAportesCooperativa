@@ -1,35 +1,40 @@
 using Microsoft.AspNetCore.Mvc;
-using SistemaControlAportesCooperativa.Data;
-using SistemaControlAportesCooperativa.Models;
-using System;
+using SistemaControlAportesCooperativa.Domain.Entities;
+using SistemaControlAportesCooperativa.Infrastructure.Interfaces;
+using System.Threading.Tasks;
+
 namespace SistemaControlAportesCooperativa.Controllers
 {
     [ApiController]
     [Route("api/[controller]")]
     public class SocioController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly ISocioRepository _socioRepository;
 
-        public SocioController(AppDbContext context)
+        public SocioController(ISocioRepository socioRepository)
         {
-            _context = context;
+            _socioRepository = socioRepository;
         }
 
         [HttpGet("estado-cuenta/{id}")]
-        public IActionResult ObtenerEstadoCuenta(int id)
+        public async Task<IActionResult> ObtenerEstadoCuenta(int id)
         {
-            var socio = _context.Socios.Find(id);
+            var socio = await _socioRepository.GetByIdAsync(id);
 
             if (socio == null) return NotFound();
 
             return Ok(socio);
         }
+
         [HttpPost]
-        public IActionResult CrearSocio([FromBody] Socio nuevoSocio)
+        public async Task<IActionResult> CrearSocio([FromBody] Socio nuevoSocio)
         {
-            _context.Socios.Add(nuevoSocio);
-            _context.SaveChanges();
+            if (nuevoSocio == null) return BadRequest();
+
+            await _socioRepository.AddAsync(nuevoSocio);
+            await _socioRepository.SaveChangesAsync();
+
             return Ok(nuevoSocio);
-        } 
-    } 
-} 
+        }
+    }
+}

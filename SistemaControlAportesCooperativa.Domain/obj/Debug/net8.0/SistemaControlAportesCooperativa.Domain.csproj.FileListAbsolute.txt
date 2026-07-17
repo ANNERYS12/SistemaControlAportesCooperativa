@@ -1,0 +1,12 @@
+C:\Users\Annerys\OneDrive\Documentos\GitHub\SistemaControlAportesCooperativa\SistemaControlAportesCooperativa.Domain\bin\Debug\net8.0\SistemaControlAportesCooperativa.Domain.deps.json
+C:\Users\Annerys\OneDrive\Documentos\GitHub\SistemaControlAportesCooperativa\SistemaControlAportesCooperativa.Domain\bin\Debug\net8.0\SistemaControlAportesCooperativa.Domain.dll
+C:\Users\Annerys\OneDrive\Documentos\GitHub\SistemaControlAportesCooperativa\SistemaControlAportesCooperativa.Domain\bin\Debug\net8.0\SistemaControlAportesCooperativa.Domain.pdb
+C:\Users\Annerys\OneDrive\Documentos\GitHub\SistemaControlAportesCooperativa\SistemaControlAportesCooperativa.Domain\obj\Debug\net8.0\SistemaControlAportesCooperativa.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Annerys\OneDrive\Documentos\GitHub\SistemaControlAportesCooperativa\SistemaControlAportesCooperativa.Domain\obj\Debug\net8.0\SistemaControlAportesCooperativa.Domain.AssemblyInfoInputs.cache
+C:\Users\Annerys\OneDrive\Documentos\GitHub\SistemaControlAportesCooperativa\SistemaControlAportesCooperativa.Domain\obj\Debug\net8.0\SistemaControlAportesCooperativa.Domain.AssemblyInfo.cs
+C:\Users\Annerys\OneDrive\Documentos\GitHub\SistemaControlAportesCooperativa\SistemaControlAportesCooperativa.Domain\obj\Debug\net8.0\SistemaControlAportesCooperativa.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Annerys\OneDrive\Documentos\GitHub\SistemaControlAportesCooperativa\SistemaControlAportesCooperativa.Domain\obj\Debug\net8.0\SistemaControlAportesCooperativa.Domain.sourcelink.json
+C:\Users\Annerys\OneDrive\Documentos\GitHub\SistemaControlAportesCooperativa\SistemaControlAportesCooperativa.Domain\obj\Debug\net8.0\SistemaControlAportesCooperativa.Domain.dll
+C:\Users\Annerys\OneDrive\Documentos\GitHub\SistemaControlAportesCooperativa\SistemaControlAportesCooperativa.Domain\obj\Debug\net8.0\refint\SistemaControlAportesCooperativa.Domain.dll
+C:\Users\Annerys\OneDrive\Documentos\GitHub\SistemaControlAportesCooperativa\SistemaControlAportesCooperativa.Domain\obj\Debug\net8.0\SistemaControlAportesCooperativa.Domain.pdb
+C:\Users\Annerys\OneDrive\Documentos\GitHub\SistemaControlAportesCooperativa\SistemaControlAportesCooperativa.Domain\obj\Debug\net8.0\ref\SistemaControlAportesCooperativa.Domain.dll

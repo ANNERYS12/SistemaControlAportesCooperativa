@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SistemaControlAportesCooperativa.Data;
-using SistemaControlAportesCooperativa.Models;
-using SistemaControlAportesCooperativa.DTO; 
+using SistemaControlAportesCooperativa.Domain.Entities;
+using SistemaControlAportesCooperativa.Infrastructure.Interfaces;
+using SistemaControlAportesCooperativa.DTO;
+using System;
+using System.Threading.Tasks;
 
 namespace SistemaControlAportesCooperativa.Controllers
 {
@@ -9,33 +11,35 @@ namespace SistemaControlAportesCooperativa.Controllers
     [Route("api/[controller]")]
     public class AporteController : ControllerBase
     {
-        private readonly AppDbContext _context;
+        private readonly IAporteRepository _aporteRepository;
 
-        public AporteController(AppDbContext context)
+        public AporteController(IAporteRepository aporteRepository)
         {
-            _context = context;
+            _aporteRepository = aporteRepository;
         }
 
         [HttpPost]
-        public IActionResult CrearAporte([FromBody] AporteDTO aporteDto)
+        public async Task<IActionResult> CrearAporte([FromBody] AporteDTO aporteDto)
         {
+            if (aporteDto == null) return BadRequest();
+
             var aporte = new Aporte
             {
                 Monto = aporteDto.Monto,
                 SocioId = aporteDto.SocioId,
-                Fecha = DateTime.Now 
+                Fecha = DateTime.Now
             };
 
-            _context.Aportes.Add(aporte);
-            _context.SaveChanges();
+            await _aporteRepository.AddAsync(aporte);
+            await _aporteRepository.SaveChangesAsync();
 
             return Ok(aporte);
         }
 
         [HttpGet]
-        public IActionResult ObtenerAportes()
+        public async Task<IActionResult> ObtenerAportes()
         {
-            var aportes = _context.Aportes.ToList();
+            var aportes = await _aporteRepository.GetAllAsync();
             return Ok(aportes);
         }
     }

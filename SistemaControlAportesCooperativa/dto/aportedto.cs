@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SistemaControlAportesCooperativa.dto
+﻿public class AporteDTO
 {
-    internal class aportedto
-    {
-    }
+    public decimal Monto { get; set; }
+    public int SocioId { get; set; }
 }
