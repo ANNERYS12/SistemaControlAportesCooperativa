@@ -1,7 +1,9 @@
 using Microsoft.EntityFrameworkCore;
-using SistemaControlAportesCooperativa.Infrastructure.Context; 
-using SistemaControlAportesCooperativa.Infrastructure.Interfaces; 
-using SistemaControlAportesCooperativa.Infrastructure.Repositories; 
+using SistemaControlAportesCooperativa.Infrastructure.Context;
+using SistemaControlAportesCooperativa.Infrastructure.Interfaces;
+using SistemaControlAportesCooperativa.Infrastructure.Repositories;
+using SistemaControlAportesCooperativa.Application.Contract;
+using SistemaControlAportesCooperativa.Application.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +14,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddScoped<ISocioRepository, SocioRepository>();
 builder.Services.AddScoped<IAporteRepository, AporteRepository>();
+
+builder.Services.AddScoped<ISocioService, SocioService>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

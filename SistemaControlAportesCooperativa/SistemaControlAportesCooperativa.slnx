@@ -1,4 +1,5 @@
 <Solution>
+  <Project Path="../SistemaControlAportesCooperativa.Application/SistemaControlAportesCooperativa.Application.csproj" Id="923f76a4-acfb-48a7-9de8-509c05a57412" />
   <Project Path="../SistemaControlAportesCooperativa.Domain/SistemaControlAportesCooperativa.Domain.csproj" Id="b02690b9-7a8f-404b-9d68-bd0fee9a82bc" />
   <Project Path="../SistemaControlAportesCooperativa.Infraestructure/SistemaControlAportesCooperativa.Infraestructure.csproj" Id="dac8b902-a3b1-4b11-b3a0-141f6ea5af42" />
   <Project Path="SistemaControlAportesCooperativa.csproj" />

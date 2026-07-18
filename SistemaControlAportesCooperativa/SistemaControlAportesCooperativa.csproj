@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\SistemaControlAportesCooperativa.Application\SistemaControlAportesCooperativa.Application.csproj" />
     <ProjectReference Include="..\SistemaControlAportesCooperativa.Domain\SistemaControlAportesCooperativa.Domain.csproj" />
     <ProjectReference Include="..\SistemaControlAportesCooperativa.Infraestructure\SistemaControlAportesCooperativa.Infraestructure.csproj" />
   </ItemGroup>
